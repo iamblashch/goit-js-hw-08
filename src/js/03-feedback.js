@@ -8,7 +8,7 @@ const form = document.querySelector('.feedback-form');
 const textarea = document.querySelector('.feedback-form textarea');
 const input = document.querySelector('input');
     
-const formData = {};
+let formData = {};
 
 populateTextarea();
 
@@ -34,6 +34,7 @@ function populateTextarea() {
     //console.log(savedMessage);
     return;
   }
+  formData = savedMessage;
   textarea.value = savedMessage['message'] || '';
   input.value = savedMessage['email'] || '';
 }
