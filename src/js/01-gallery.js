@@ -16,7 +16,7 @@ const createItemsMarkup = galleryItems
 
 const alleryContainerEl = document.querySelector('.gallery');
 alleryContainerEl.insertAdjacentHTML('beforeend', createItemsMarkup);
-let lightbox = new SimpleLightbox('.gallery a', {
+const lightbox = new SimpleLightbox('.gallery a', {
   scrollZoom: false,
   captionDelay: 250,
   captionsData: 'alt',
