@@ -20,6 +20,7 @@ form.addEventListener('submit', e => {
   const objData = JSON.parse(localStorage.getItem(STORAGE_KEY));
   localStorage.removeItem(STORAGE_KEY);
 });
+console.log(form);
 
 function onTextareaInput(e) {
   formData[e.target.name] = e.target.value;
@@ -31,7 +32,6 @@ function populateTextarea() {
   const savedMessage = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
   if (savedMessage === null) {
-    //console.log(savedMessage);
     return;
   }
   formData = savedMessage;
